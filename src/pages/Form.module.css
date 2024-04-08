@@ -1,0 +1,174 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  color: #ececec;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  gap: 1rem;
+  background-color: #42484c;
+  padding: 3%;
+  border-radius: 0.5rem;
+}
+
+.formContainer label {
+  font-size: 1vw;
+}
+
+.cityname {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7vw;
+}
+
+.cityname input,
+.date input,
+.notes input {
+  padding: 0.3vw;
+  width: 21vw;
+  height: 3vh;
+  border-radius: 0.4vw;
+  font-size: 1vw;
+  background-color: #e7e8e8;
+  border: none;
+  outline: none;
+}
+
+.cityname input:focus,
+.date input:focus,
+.notes input:focus {
+  background-color: white;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7vw;
+}
+
+.popup {
+  padding: 0.3vw;
+  width: 21vw;
+  height: 3vh;
+  border-radius: 0.4vw;
+  font-size: 1vw;
+  background-color: #e7e8e8;
+  border: none;
+  outline: none;
+}
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7vw;
+}
+
+.notes input {
+  padding: 0.3vw;
+  width: 21vw;
+  border-radius: 0.4vw;
+  font-size: 1vw;
+  background-color: #e7e8e8;
+  border: none;
+  outline: none;
+  height: 5vh;
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2%;
+  text-align: center;
+}
+
+.flag {
+  position: absolute;
+  right: 74.5%;
+  top: 24.5%;
+  font-size: 1.8vw;
+  z-index: 1000;
+}
+
+@media screen and (max-width: 768px) {
+  .formContainer {
+    width: fit-content;
+    height: fit-content;
+    padding: 2%;
+  }
+  .formContainer label {
+    font-size: 1.5vw;
+  }
+
+  .cityname {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+  }
+  .cityname input:focus {
+    background-color: white;
+  }
+  .cityname input {
+    width: 40vw;
+    height: 2vh;
+    font-size: 1.5vw;
+  }
+
+  .date input {
+    width: 40vw;
+    height: 2vh;
+    font-size: 1.5vw;
+  }
+
+  .notes input {
+    width: 40vw;
+    font-size: 1.5vw;
+    height: 3.5vh;
+  }
+  .buttons {
+    width: 100%;
+    padding: 1%;
+  }
+
+  .flag {
+    position: absolute;
+    right: 74.5%;
+    top: 24.5%;
+    font-size: 1.8vw;
+    z-index: 1000;
+  }
+}
+@media screen and (max-width: 425px) {
+  .formContainer label {
+    font-size: 3vw;
+  }
+
+  .cityname input {
+    width: 70vw;
+    height: 2vh;
+    font-size: 2.5vw;
+  }
+
+  .date input {
+    width: 70vw;
+    height: 2vh;
+    font-size: 2.5vw;
+  }
+  .notes input {
+    width: 70vw;
+    font-size: 2.5vw;
+    height: 3.5vh;
+  }
+  .buttons {
+    width: 100%;
+    padding: 1%;
+  }
+
+  .flag {
+    position: absolute;
+    right: 74.5%;
+    top: 24.5%;
+    font-size: 1.8vw;
+    z-index: 1000;
+  }
+}

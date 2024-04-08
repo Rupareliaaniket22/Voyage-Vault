@@ -1,0 +1,18 @@
+.countrycontainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #42484c;
+  align-items: center;
+  padding: 4%;
+  font-size: 1.3rem;
+  width: 8rem;
+  height: 5rem;
+  color: #ececec;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 0.5rem;
+  border-left: 0.3rem solid #ffb545;
+  justify-content: center;
+}
+.countrycontainer span:first-of-type {
+  font-size: 2rem;
+}

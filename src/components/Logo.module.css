@@ -1,0 +1,34 @@
+.Logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: auto;
+}
+
+.Logo img {
+  width: 5vw;
+}
+.logoandtitlecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 2vw;
+  width: 100%;
+}
+.logoandtitlecontainer p {
+  color: white;
+  font-size: 3vw;
+}
+
+@media screen and (max-width: 425px) {
+  .Logo img {
+    width: 2rem;
+  }
+  .logoandtitlecontainer p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+}

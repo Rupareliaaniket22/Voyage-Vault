@@ -1,0 +1,8 @@
+.countries {
+  display: flex;
+  align-self: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  width: 100%;
+}

@@ -1,0 +1,17 @@
+.citylist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .citylist {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2vw;
+    width: 100%;
+  }
+}

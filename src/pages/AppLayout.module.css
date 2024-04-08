@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+}
+.leftbar a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+  .leftbar {
+    height: 30vh;
+    width: 100vw;
+  }
+}

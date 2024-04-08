@@ -1,0 +1,98 @@
+.cityblock {
+  display: flex;
+  background-color: #42484c;
+  justify-content: space-between;
+  width: 25vw;
+  height: 6vh;
+  color: #ececec;
+  align-items: center;
+  border-radius: 0.5vw;
+  border-left: 0.3vw solid #00c46a;
+  padding: 3%;
+  gap: 0.4vw;
+}
+.firstsection {
+  display: flex;
+  gap: 0.5vw;
+  font-weight: 500;
+  font-style: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 0.1vw;
+  font-size: 1vw;
+  align-items: center;
+  justify-content: center;
+}
+.secondsection {
+  display: flex;
+  gap: 0.5vw;
+  font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  align-items: center;
+  justify-content: center;
+  font-size: 1vw;
+}
+.secondsection button {
+  border-radius: 50%;
+  border: none;
+  background-color: #2c3438;
+  color: #ececec;
+  padding: 0.6vw;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  width: 0.5vw;
+  height: 0.5vh;
+  z-index: 1000;
+  font-size: 0.8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.secondsection button:hover {
+  background-color: #ffb545;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .firstsection {
+    font-size: 0.7rem;
+  }
+  .secondsection {
+    font-size: 0.5rem;
+    gap: 0.2vw;
+  }
+  .cityblock {
+    gap: 3vw;
+    width: 100%;
+    border-left: 0.3vw solid #00c46a;
+  }
+  .secondsection button {
+    padding: 1vw;
+    width: 2vw;
+    height: 1vh;
+    font-size: 1vw;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .firstsection {
+    font-size: 3vw;
+  }
+  .secondsection {
+    font-size: 3vw;
+    gap: 1vw;
+  }
+  .cityblock {
+    width: 100%;
+    border-left: 0.3vw solid #00c46a;
+    overflow: scroll;
+    gap: 3vw;
+  }
+  .secondsection button {
+    padding: 2vw;
+    width: 1.8vw;
+    height: 1.5vh;
+    font-size: 1.7vw;
+  }
+}
