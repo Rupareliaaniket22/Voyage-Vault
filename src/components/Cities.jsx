@@ -3,13 +3,15 @@ import styles from "./Cities.module.css";
 import { useCity } from "../Context/CitiesContext";
 
 function Cities({ city }) {
-  const date = new Date(city.date);
   const { data, setdata } = useCity();
-  const formattedDate = new Intl.DateTimeFormat("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  }).format(date);
+  const dateString = city.date;
+
+  const [month, day, year] = dateString.split("/");
+
+  const date = new Date(`${day}/${month}/${year}`);
+
+  const options = { month: "long", day: "numeric", year: "numeric" };
+  const formattedDate = date.toLocaleDateString("en-US", options);
 
   function HandleRemoveCity(id, e) {
     e.preventDefault();

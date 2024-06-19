@@ -10,6 +10,7 @@
     ),
     url(/public/homebackground.jpg);
   flex-direction: column;
+  overflow: hidden;
 }
 .home_hero_section {
   display: flex;

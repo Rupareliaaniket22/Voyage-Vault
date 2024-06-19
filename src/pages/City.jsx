@@ -1,6 +1,6 @@
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useCity } from "../Context/CitiesContext";
-import { useContext } from "react";
+
 import styles from "./City.module.css";
 import Button from "../components/Button";
 
@@ -8,22 +8,19 @@ function City() {
   const { id } = useParams();
   const { data, setdata } = useCity();
   const navigate = useNavigate();
-
+  console.log(data);
   const selectedCity = data.find((city) => city.id === Number(id)); // Log the selected city
   if (!selectedCity) {
     return <div>Loading...</div>;
   }
   const wikiUrl = `https://en.wikipedia.org/wiki/${selectedCity.cityName}`;
-  // Parse and format the date
-  const formattedDate = new Date(selectedCity.date).toLocaleDateString(
-    "en-US",
-    {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    }
-  );
+  const dateString = selectedCity.date;
+  const [month, day, year] = dateString.split("/");
+
+  const date = new Date(`${day}/${month}/${year}`);
+
+  const options = { month: "long", day: "numeric", year: "numeric" };
+  const formattedDate = date.toLocaleDateString("en-US", options);
   return (
     <div className={styles.cardcontainer}>
       <div className={styles.namecontainer}>
@@ -57,7 +54,7 @@ function City() {
       </div>
       <Button
         type="Back"
-        onclick={(e) => {
+        onclick={() => {
           navigate(-1);
         }}
       >

@@ -8,6 +8,7 @@
   background-color: #2c3438;
   padding: 2%;
   gap: 2rem;
+  overflow: scroll;
 }
 .main:first-child img {
   width: 3vw;

@@ -5,9 +5,9 @@ const CitiesContext = createContext();
 function CitiesProvider({ children }) {
   const [data, setdata] = useState([]);
   const [dataexist, setdataexists] = useState();
-  console.log(data.length);
   useEffect(() => {
     const storedData = localStorage.getItem("data");
+    console.log(storedData);
     if (storedData) {
       setdata(JSON.parse(storedData));
       setdataexists(true);
@@ -19,7 +19,7 @@ function CitiesProvider({ children }) {
 
   useEffect(() => {
     if (dataexist) localStorage.setItem("data", JSON.stringify(data));
-  }, [data]);
+  }, [data, dataexist]);
 
   return (
     <CitiesContext.Provider value={{ data, setdata }}>
